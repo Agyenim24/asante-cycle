@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Projects — aSantE Cycle</title>
+    <script>
+(function () {
+  try {
+    var k = "asantec-cycle-theme";
+    var t = localStorage.getItem(k);
+    if (t === "dark" || t === "light") {
+      document.documentElement.setAttribute("data-theme", t);
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="assets/images/logoNoback.png" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar site-header">
+        <a href="learnJs.html" class="log">
+            <img src="assets/images/logoNoback.png" alt="aSantE Cycle" width="36" height="36" class="brand-mark">
+            <span class="brand-title">aSantE Cycle</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+            <ul class="nav-links">
+                <li><a href="learnJs.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="impacts.html">Impact</a></li>
+                <li><a href="projects.html" aria-current="page">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="con header-actions">
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" title="Theme" aria-pressed="false">
+                <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
+                <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+            </button>
+            <button type="button" class="btn btn--primary btn--sm">Contact <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="container page-hero__inner">
+                <span class="pill"><span class="pill__dot" aria-hidden="true"></span> Programs</span>
+                <h1 id="page-title" class="page-hero__title">Sustainability projects</h1>
+                <p class="page-hero__lead">Beyond products, we fund environmental initiatives you can trace from contribution to outcome—reforestation, coastal recovery, and fair trade supply chains.</p>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="container">
+                <div class="projects-card card-grid">
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/tomato.jpg" alt="Tomatoes in sustainable farming" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Tree planting program</h3>
+                            <p class="card-desc">For every purchase we contribute to reforestation across Indonesia. Native species are selected with local partners to restore watersheds and biodiversity.</p>
+                            <p class="card-meta">15k+ trees since 2022</p>
+                        </div>
+                    </article>
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/vegetation.jpg" alt="Coastal vegetation" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Coastal clean-up partnerships</h3>
+                            <p class="card-desc">We collaborate with NGOs and volunteers on regular beach and estuary clean-ups, with waste sorted for recycling where facilities exist.</p>
+                            <p class="card-meta">5k+ kg waste collected</p>
+                        </div>
+                    </article>
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/fam.jpg" alt="Fair trade community" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Fair trade supplier network</h3>
+                            <p class="card-desc">Small-scale farmers receive fair pricing and support for eco-friendly production—reducing chemical inputs and building resilient local economies.</p>
+                            <p class="card-meta">100+ farmers · Southeast Asia</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="content-block mt-section">
+                    <h2>How projects are funded</h2>
+                    <p>A dedicated share of revenue from qualifying product lines goes to these programs. We review partner performance annually and adjust funding based on measurable results and community feedback.</p>
+                    <p>For more detail on outcomes, visit our <a href="impacts.html">Impact</a> page or read stories on the <a href="blog.html">Blog</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted page-section page-section--border">
+            <div class="container other-projects feature-stack">
+                <div class="box1 feature-hero">
+                    <img loading="lazy" class="side-image" src="assets/images/beans.jpg" alt="Sustainable sourcing">
+                </div>
+                <div class="box2">
+                    <article class="feature-row box3">
+                        <img loading="lazy" class="right-image" src="assets/images/tomato.jpg" alt="Harvest">
+                        <div class="box5">
+                            <h3 class="feature-title">Packaging innovation</h3>
+                            <p class="feature-text">Recycled and compostable materials for shipping—tested for durability so your orders arrive safely with less waste.</p>
+                        </div>
+                    </article>
+                    <article class="feature-row box4">
+                        <img loading="lazy" class="right-image" src="assets/images/fam.jpg" alt="Team">
+                        <div class="box5">
+                            <h3 class="feature-title">Community workshops</h3>
+                            <p class="feature-text">On-the-ground education on composting, low-waste cooking, and plastic alternatives in partner regions.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="container join cta-panel">
+                <div class="join-info">
+                    <h2 class="join-heading">Support the next project</h2>
+                    <p class="join-lead">Shop consciously and hear when new initiatives launch.</p>
+                    <a href="learnJs.html#subscribe" class="btn btn--on-dark">Newsletter signup <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <a href="learnJs.html" class="footer__brand log">
+                <img src="assets/images/logoNoback.png" alt="aSantE Cycle" width="32" height="32" class="brand-mark">
+                <span class="brand-title">aSantE Cycle</span>
+            </a>
+            <nav class="footer__nav" aria-label="Footer">
+                <a href="learnJs.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="impacts.html">Impact</a>
+                <a href="learnJs.html#subscribe">Newsletter</a>
+            </nav>
+            <p class="footer__copy">© <span id="footer-year"></span> aSantE Cycle. All rights reserved.</p>
+        </div>
+        <div class="contacts" aria-hidden="true"></div>
+    </footer>
+
+    <script src="learn.js"></script>
+</body>
+</html>

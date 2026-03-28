@@ -1,246 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aSantE Cycle</title>
-    <script src="learn.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>aSantE Cycle — Sustainable Living</title>
+    <script>
+(function () {
+  try {
+    var k = "asantec-cycle-theme";
+    var t = localStorage.getItem(k);
+    if (t === "dark" || t === "light") {
+      document.documentElement.setAttribute("data-theme", t);
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Prata&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="shortcut icon" href="assets/images/logoNoback.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="assets/images/logoNoback.png" type="image/x-icon">
 </head>
 <body>
+    <header class="navbar site-header">
+        <a href="learnJs.html" class="log">
+            <img src="assets/images/logoNoback.png" alt="aSantE Cycle" width="36" height="36" class="brand-mark">
+            <span class="brand-title">aSantE Cycle</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+            <ul class="nav-links">
+                <li><a href="learnJs.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="impacts.html">Impact</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="con header-actions">
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" title="Theme" aria-pressed="false">
+                <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
+                <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+            </button>
+            <button type="button" class="btn btn--primary btn--sm">Contact <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+        </div>
+    </header>
 
-    <div class="navbar">
-        <div class="log">
-            <img src="assets/images/logoNoback.png" alt="" width="35px">
-            <h1>aSantE Cycle</h1></div>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Our Impact</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Blog</a></li>
-        </ul>
-        <div class="con"><button type="button">Contact Us <i class="fa-solid fa-arrow-right"></i></button></div>
-    </div>
-
- <div class="cont1">
-    <div class="text1">
-        <h1>Sustainable Living <br> Starts Here</h1>
-    </div>
-    <div class="detail1"><p>Discover eco-friendly essentials designed to help you reduce waste. live mindfully, and make a positive impact on the planet - <br>
-    without compromising on style or quality</p></div>
-     <div class="learn">
-    <button>Learn More <i class="fa-solid fa-arrow-right"></i></button>
- </div>
- <div class="container">
-    <div class="cont2">
-        <div class="mini"><img loading="lazy" src="assets/images/forest.jpg" alt="" width="120px" min-height="10vh"></div>
-        
-        <div class="summary"><h3>Tree Planting Program</h3>
-        <p>For every purchase. we contribute to reforestation <br>
-        projects across Indonesia</p>
-            
-        <button class="read" type="button">Read More  <i class="fa-solid fa-arrow-right"></i> </button>
-    </div>
-    </div>
-    <div class="cont3">
-        <div class="summary">
-            <p>I appreciate how transparent aSantE Cycle is about their <br>
-            sourcing and environmental impact. i feel like I'm part of something <br>
-        bigger every tiime i contribute here. </p>
-        <div class="profile">
-            <div class="profile-pic"><i class="fa-solid fa-user"></i></div>
-            <div class="data">
-                <h4>Aggrey</h4>
+    <main>
+        <section class="cont1 hero" aria-labelledby="hero-heading">
+            <div class="container hero__inner">
+                <div class="hero__copy">
+                    <p class="eyebrow">Sustainability · Impact · Community</p>
+                    <h1 id="hero-heading" class="hero__title">Sustainable living starts here</h1>
+                    <p class="hero__lead">Eco-friendly essentials to help you reduce waste, live mindfully, and make a positive impact—without compromising quality.</p>
+                    <div class="hero__actions">
+                        <button type="button" class="btn btn--on-dark">Learn more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="hero__cards">
+                    <div class="glass-card cont2">
+                        <div class="mini">
+                            <img loading="lazy" src="assets/images/forest.jpg" alt="Forest reforestation">
+                        </div>
+                        <div class="summary">
+                            <h3>Tree planting</h3>
+                            <p>Every purchase supports reforestation projects across Indonesia.</p>
+                            <button class="read btn btn--ghost-light" type="button">Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="glass-card cont3">
+                        <div class="summary">
+                            <p class="quote">“Transparent sourcing and real environmental impact—I feel part of something bigger.”</p>
+                            <div class="profile">
+                                <div class="profile-pic" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
+                                <div class="data">
+                                    <p class="profile-name">Aggrey</p>
+                                    <p class="profile-role">Community member</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section class="section section--muted cont4">
+            <div class="container about-grid">
+                <div class="motive">
+                    <span class="pill"><span class="pill__dot" aria-hidden="true"></span> Built for tomorrow</span>
+                    <video class="video" autoplay loop muted playsinline>
+                        <source src="assets/images/back vid.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="about">
+                    <h2 class="section-heading">From a small initiative to a growing movement</h2>
+                    <p class="lead">Conscious consumers choosing ethical sourcing and plastic-free packaging.</p>
+                    <p class="body-text">We measure environmental impact with every product and invest in long-term partnerships.</p>
+                    <div class="plantation">
+                        <div class="cont5 media-tile"><img loading="lazy" src="assets/images/fam.jpg" alt="Community"></div>
+                        <div class="cont6 media-tile"><img loading="lazy" src="assets/images/beans.jpg" alt="Produce"></div>
+                    </div>
+                    <div class="rating stat-grid">
+                        <div class="number stat">
+                            <span class="stat__value">10k+</span>
+                            <span class="stat__label">Plastic reduced (kg)</span>
+                        </div>
+                        <div class="number stat">
+                            <span class="stat__value">50+</span>
+                            <span class="stat__label">Eco product lines</span>
+                        </div>
+                        <div class="number stat">
+                            <span class="stat__value">15k+</span>
+                            <span class="stat__label">Trees planted</span>
+                        </div>
+                        <div class="number stat">
+                            <span class="stat__value">100%</span>
+                            <span class="stat__label">Carbon-neutral shipping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects">
+            <div class="container our-projects">
+                <header class="section-header">
+                    <span class="pill"><span class="pill__dot" aria-hidden="true"></span> Projects</span>
+                    <div class="section-header__row">
+                        <div>
+                            <h2 class="section-heading">Sustainability initiatives</h2>
+                            <p class="section-sub">Beyond products—we fund environmental programs you can trust.</p>
+                        </div>
+                        <a href="projects.html" class="btn btn--secondary">View all <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </header>
+
+                <div class="projects-card card-grid">
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/tomato.jpg" alt="Tomatoes in sustainable farming" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Tree planting program</h3>
+                            <p class="card-desc">Reforestation across Indonesia with every purchase.</p>
+                            <p class="card-meta">15k+ trees since 2022</p>
+                        </div>
+                    </article>
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/vegetation.jpg" alt="Coastal vegetation" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Coastal clean-up</h3>
+                            <p class="card-desc">Partnerships with NGOs and volunteers for beach clean-ups.</p>
+                            <p class="card-meta">5k+ kg waste collected</p>
+                        </div>
+                    </article>
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/fam.jpg" alt="Fair trade community" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">Fair trade network</h3>
+                            <p class="card-desc">Small-scale farmers using eco-friendly production.</p>
+                            <p class="card-meta">100+ farmers · Southeast Asia</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="mission">
+                    <span class="pill"><span class="pill__dot" aria-hidden="true"></span> Team</span>
+                    <h2 class="mission-heading">People behind the mission</h2>
+                    <p class="mission-lead">A diverse team building a brand that’s kind to people and the planet.</p>
+                </div>
+
+                <div class="people team-grid">
+                    <article class="card card--team">
+                        <div class="card__media card__media--round">
+                            <img src="assets/images/agg.jpg" alt="Aggrey" class="card-image">
+                        </div>
+                        <div class="card-info card-info--static">
+                            <h3 class="card-title">Aggrey</h3>
+                            <p class="card-role">Chief Executive Officer</p>
+                        </div>
+                    </article>
+                    <article class="card card--team">
+                        <div class="card__media card__media--round">
+                            <img src="assets/images/agg.jpg" alt="Agyenim" class="card-image">
+                        </div>
+                        <div class="card-info card-info--static">
+                            <h3 class="card-title">Agyenim</h3>
+                            <p class="card-role">Member</p>
+                        </div>
+                    </article>
+                    <article class="card card--team">
+                        <div class="card__media card__media--round">
+                            <img src="assets/images/agg.jpg" alt="Tracy" class="card-image">
+                        </div>
+                        <div class="card-info card-info--static">
+                            <h3 class="card-title">Tracy</h3>
+                            <p class="card-role">Volunteer</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="bio" aria-hidden="true"></div>
+
+                <div class="stories split">
+                    <div class="tips">
+                        <h2 class="stories-heading">Tips &amp; stories</h2>
+                        <p class="section-sub">Guides and behind-the-scenes for everyday sustainable choices.</p>
+                    </div>
+                    <div class="inspiration">
+                        <a href="blog.html" class="btn btn--secondary">Browse <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="other-projects feature-stack">
+                    <div class="box1 feature-hero">
+                        <img loading="lazy" class="side-image" src="assets/images/beans.jpg" alt="Sustainable sourcing">
+                    </div>
+                    <div class="box2">
+                        <article class="feature-row box3">
+                            <img loading="lazy" class="right-image" src="assets/images/tomato.jpg" alt="Harvest">
+                            <div class="box5">
+                                <h3 class="feature-title">Sustainable packaging</h3>
+                                <p class="feature-text">How we ship with recycled and compostable materials only.</p>
+                                <button type="button" class="btn btn--link">Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </article>
+                        <article class="feature-row box4">
+                            <img loading="lazy" class="right-image" src="assets/images/fam.jpg" alt="Team">
+                            <div class="box5">
+                                <h3 class="feature-title">Behind the scenes</h3>
+                                <p class="feature-text">Our team preparing orders with care and low impact.</p>
+                                <button type="button" class="btn btn--link">Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="join cta-panel" id="subscribe">
+                    <div class="join-info">
+                        <h2 class="join-heading">Join the movement</h2>
+                        <p class="join-lead">Product drops, offers, and practical tips—in your inbox.</p>
+                        <form class="subscribe-form" action="#" method="post">
+                            <label class="visually-hidden" for="email-subscribe">Email address</label>
+                            <input type="email" name="email" id="email-subscribe" class="input" placeholder="you@email.com" required autocomplete="email">
+                            <button type="submit" class="btn btn--primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <img src="assets/images/logoNoback.png" alt="aSantE Cycle" width="32" height="32" class="brand-mark">
+                <span class="brand-title">aSantE Cycle</span>
+            </div>
+            <nav class="footer__nav" aria-label="Footer">
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="projects.html">Projects</a>
+                <a href="learnJs.html#subscribe">Newsletter</a>
+            </nav>
+            <p class="footer__copy">© <span id="footer-year"></span> aSantE Cycle. All rights reserved.</p>
         </div>
-        </div>
-    </div>
- </div>
- </div>
- <div class="cont4">
-    <div class="motive"> <p><i class="fa-solid fa-circle"></i> Built for a Better Tomorrow</p>
-    <video width="350" height="200" autoplay loop muted class="video">
-        <source src="assets/images/back vid.mp4" type="video/mp4">
-    </video>
-    </div>
-    <div class="about">
-        <h4>Started as a small eco initiative, now growing into a </h4>
-        <p>movement of conscious consumers</p>
-        <p>We focus on ethical sourcing, plastic-free packaging. <br>
-        and environmental impact with every product.</p>
-         <div class="plantation">
-        <div class="cont5"><img loading="lazy" src="assets/images/fam.jpg" alt="" ></div>
-        <div class="cont6"><img loading="lazy" src="assets/images/beans.jpg" alt=""></div>
-    </div>
-    <div class="rating">
-        <div class="number">
-            <h3>10k+</h3>
-            <p>Plastic Reduced (kg)</p>
-        </div>
-         <div class="number">
-            <h3>50+</h3>
-            <p>Eco Product lines </p>
-        </div>
-         <div class="number">
-            <h3>15k+</h3>
-            <p>Trees planted</p>
-        </div>
-         <div class="number">
-            <h3>100%</h3>
-            <p>Carbon Neutral shipping</p>
-        </div>
-    </div>
-    </div>
-   
- </div>
- <div class="projects">
-    <div class="our-projects">
-    <p><i class="fa-solid fa-circle"></i>  Our Projects</p>
-  <h4>Our Sustainability Projects</h4>
-  <div class="article">
-    <h5>Beyond products we support environmental initiatives.</h5>
-    <div class="view-more"><button type="button">View More <i class="fa-solid fa-arrow-right"></i></button></div>
- </div>
-  <div class="projects-card">
-    <div class="card">
-  <img src="assets/images/tomato.jpg" alt="" class="card-image" />
-  <div class="card-info">
-    <h1>Tree Planting Program</h1>
-    <h5>For every purchase we contribute to <br> reforestation projects across Indonesia.</h5>
-    <h3>15k+ tress planted since 2022</h3>
-  </div>
-
-
-</div>
-  <div class="card">
-  <img src="assets/images/vegetation.jpg" alt="" class="card-image" />
-  <div class="card-info">
-    <h1>Coastal Clean-Up Partnerships</h1>
-    <h5>We collaborate with local NGOs and Volunteers <br> to organize regukar 
-    beach clean-up events.</h5>
-    <h3>5k+ kg of waste collected</h3>
-  </div>
-
-
-</div>
-  <div class="card">
-  <img src="assets/images/fam.jpg" alt="" class="card-image" />
-  <div class="card-info">
-    <h1>Fair Trade Supplier Network</h1>
-    <h5>We work with small-scale farmers who <br> use eco-friendly production materials.</h5>
-    <h3>100+ farmers across southeast Asia</h3>
-  </div>
-</div>
-  </div>
-  <div class="mission">
-    <p><i class="fa-solid fa-circle"></i> Our Projects</p>
-    <h1>Meet the People Behind <br>
-    the Mission</h1>
-
-    <h4>A diverse group of passionate individuals working together to build a brand that's <br>
-    kind to people as it is to the planet</h4>
-  </div>
-
-  <div class="people">
-     <div class="card">
-  <img src="assets/images/agg.jpg" alt="" class="card-image" />
-  <div class="card-info">
-    <h1>Aggrey</h1>
-    <h5>Cheif Executive Officer</h5>
-    
-  </div>
-</div>
- <div class="card">
-  <img src="assets/images/agg.jpg" alt="" class="card-image" />
-  <div class="card-info">
-    <h1>Agyenim</h1>
-    <h5>Member</h5>
-    
-  </div>
-</div>
- <div class="card">
-  <img src="assets/images/agg.jpg" alt="" class="card-image" />
-  <div class="card-info">
-    <h1>Tracy</h1>
-    <h5>Volunteer</h5>
-  </div>
-</div>
- 
-<!--
-<div class="card">
-  <img src="assets/images/fam.jpg" alt="" class="card-image" />
-  <div class="card-info">
-    <h1>Grace</h1>
-    <h5>HR</h5>
-  </div>
-</div>
--->
-  </div>
-  
-<div class="bio">
-
-</div>
-
-<div class="stories">
-  <div class="tips"><h1>Sustainability  Tips <br> & Stories </h1></div>
-  <div class="inspiration">
-    <h4>Stay informed and inspired with eco-living guides, behind-the-scences and <br>
-    helpful tips for making everyday sustainable choices.</h4>
-    <button type="button">View More <i class="fa-solid fa-arrow-right"></i></button>
-  </div>
-</div>
-<div class="other-projects">
-  <div class="box1">
-        <img loading="lazy" class="side-image" width="200px" src="assets/images/beans.jpg" alt="" >
-
-  </div>
-
-  <div class="box2">
-   <div class="box3">
-<img loading="lazy" width="200px" class="right-image" src="assets/images/tomato.jpg" alt="" >
- <div class="box5">
-   <h1>Behind the Scenes; Our <br> Sustainable packaging <br>Process</h1>
- <h5>Take a tour of how we prepare and ship your <br> orders 
-using only recycled and compostable <br> materials.</h5>
-
-<button type="button">Read More <i class="fa-solid fa-arrow-right"></i></button>
- </div>
-   </div>
-   <div class="box4">
-<img loading="lazy" width="200px" class="right-image" src="assets/images/fam.jpg" alt="" >
-<div class="box5">
-   <h1>Behind the Scenes; Our <br> Sustainable packaging <br>Process</h1>
- <h5>Take a tour of how we prepare and ship your <br> orders 
-using only recycled and compostable <br> materials.</h5>
-
-<button type="button">Read More <i class="fa-solid fa-arrow-right"></i></button>
- </div>
-   </div>
-
-  </div>
-</div>
-<div class="join">
-  <div class="join-info">
-    <h1>Join the Eco Movement </h1>
-    <h4>Be the first to hear new products exclusive offers, and actionable tips for living <br>
-    a more sustainable lifestyle-direct to your inbox.</h4>
-    <form action="">
-      <input type="email" name="" id="" placeholder="Your email" required><br><br>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-</div>
-
-<footer>
-      <div class="contacts">
-        
-      </div>
+        <div class="contacts" aria-hidden="true"></div>
     </footer>
+
+    <script src="learn.js"></script>
 </body>
 </html>

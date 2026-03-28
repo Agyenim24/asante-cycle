@@ -186,4 +186,73 @@ let num4 = sync(8,2)
 console.log(num4)
 setTimeout(sync,3000)
 
- 
+const THEME_KEY = 'asantec-cycle-theme'
+
+function getTheme() {
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
+}
+
+function setTheme(theme) {
+  const next = theme === 'dark' ? 'dark' : 'light'
+  document.documentElement.setAttribute('data-theme', next)
+  try {
+    localStorage.setItem(THEME_KEY, next)
+  } catch (e) {}
+  return next
+}
+
+function syncThemeToggle(button) {
+  if (!button) return
+  const dark = getTheme() === 'dark'
+  button.setAttribute('aria-pressed', String(dark))
+  button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme')
+  button.title = dark ? 'Light mode' : 'Dark mode'
+}
+
+function initThemeToggle() {
+  const btn = document.getElementById('theme-toggle')
+  if (!btn) return
+  syncThemeToggle(btn)
+  btn.addEventListener('click', () => {
+    const next = getTheme() === 'dark' ? 'light' : 'dark'
+    setTheme(next)
+    syncThemeToggle(btn)
+  })
+  window.addEventListener('storage', (e) => {
+    if (e.key !== THEME_KEY || !e.newValue) return
+    if (e.newValue === 'dark' || e.newValue === 'light') {
+      document.documentElement.setAttribute('data-theme', e.newValue)
+      syncThemeToggle(btn)
+    }
+  })
+}
+
+function initMobileNav() {
+  const navbar = document.querySelector('.navbar')
+  const navToggle = document.querySelector('.nav-toggle')
+  const navMenu = document.querySelector('#primary-nav')
+
+  if (!navbar || !navToggle || !navMenu) return
+
+  navToggle.addEventListener('click', () => {
+    const open = navbar.classList.toggle('nav-is-open')
+    navToggle.setAttribute('aria-expanded', String(open))
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu')
+  })
+
+  navMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navbar.classList.remove('nav-is-open')
+      navToggle.setAttribute('aria-expanded', 'false')
+      navToggle.setAttribute('aria-label', 'Open menu')
+    })
+  })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const yearEl = document.getElementById('footer-year')
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear())
+
+  initThemeToggle()
+  initMobileNav()
+})

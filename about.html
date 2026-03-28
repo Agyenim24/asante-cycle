@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>About — aSantE Cycle</title>
+    <script>
+(function () {
+  try {
+    var k = "asantec-cycle-theme";
+    var t = localStorage.getItem(k);
+    if (t === "dark" || t === "light") {
+      document.documentElement.setAttribute("data-theme", t);
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="assets/images/logoNoback.png" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar site-header">
+        <a href="learnJs.html" class="log">
+            <img src="assets/images/logoNoback.png" alt="aSantE Cycle" width="36" height="36" class="brand-mark">
+            <span class="brand-title">aSantE Cycle</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+            <ul class="nav-links">
+                <li><a href="learnJs.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="impacts.html">Impact</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="con header-actions">
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" title="Theme" aria-pressed="false">
+                <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
+                <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+            </button>
+            <button type="button" class="btn btn--primary btn--sm">Contact <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="container page-hero__inner">
+                <span class="pill"><span class="pill__dot" aria-hidden="true"></span> Our story</span>
+                <h1 id="page-title" class="page-hero__title">About aSantE Cycle</h1>
+                <p class="page-hero__lead">We started as a small eco initiative and grew into a movement of conscious consumers, partners, and communities across Southeast Asia.</p>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="container">
+                <div class="content-block">
+                    <h2>Who we are</h2>
+                    <p>aSantE Cycle designs and curates eco-friendly essentials that help you reduce waste and live more mindfully. We believe sustainability should feel practical, transparent, and aligned with everyday life—not an extra burden.</p>
+                    <p>Our team works directly with suppliers who share our standards for ethical sourcing, fair conditions, and lower environmental impact. Every product line is reviewed for packaging, logistics, and end-of-life impact.</p>
+                </div>
+                <div class="value-grid" role="list">
+                    <div class="value-card" role="listitem">
+                        <h3><i class="fa-solid fa-leaf" aria-hidden="true"></i> Transparency</h3>
+                        <p>We publish clear information on sourcing, certifications, and the footprint of our operations.</p>
+                    </div>
+                    <div class="value-card" role="listitem">
+                        <h3><i class="fa-solid fa-handshake" aria-hidden="true"></i> Partnerships</h3>
+                        <p>Long-term relationships with farmers, NGOs, and local groups keep impact grounded in real places.</p>
+                    </div>
+                    <div class="value-card" role="listitem">
+                        <h3><i class="fa-solid fa-box-open" aria-hidden="true"></i> Plastic-free first</h3>
+                        <p>We prioritize recycled and compostable packaging and continuously phase out unnecessary plastic.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted page-section page-section--border">
+            <div class="container about-grid">
+                <div class="motive">
+                    <span class="pill"><span class="pill__dot" aria-hidden="true"></span> Where we work</span>
+                    <img loading="lazy" class="side-image" src="assets/images/forest.jpg" alt="Forest landscape representing our reforestation focus">
+                </div>
+                <div class="about">
+                    <h2 class="section-heading">From Indonesia to your door</h2>
+                    <p class="lead">Reforestation, coastal clean-ups, and fair trade networks are at the heart of how we give back.</p>
+                    <p class="body-text">We invest a portion of revenue in tree planting and community programs, and we report on outcomes annually so you can see the difference your choices make.</p>
+                    <p class="body-text"><a href="projects.html">Explore our projects</a> or <a href="impacts.html">read the latest impact numbers</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="container join cta-panel">
+                <div class="join-info">
+                    <h2 class="join-heading">Stay in the loop</h2>
+                    <p class="join-lead">Get updates on new products, partnerships, and stories from the field.</p>
+                    <a href="learnJs.html#subscribe" class="btn btn--on-dark">Subscribe on the home page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <a href="learnJs.html" class="footer__brand log">
+                <img src="assets/images/logoNoback.png" alt="aSantE Cycle" width="32" height="32" class="brand-mark">
+                <span class="brand-title">aSantE Cycle</span>
+            </a>
+            <nav class="footer__nav" aria-label="Footer">
+                <a href="learnJs.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="learnJs.html#subscribe">Newsletter</a>
+            </nav>
+            <p class="footer__copy">© <span id="footer-year"></span> aSantE Cycle. All rights reserved.</p>
+        </div>
+        <div class="contacts" aria-hidden="true"></div>
+    </footer>
+
+    <script src="learn.js"></script>
+</body>
+</html>

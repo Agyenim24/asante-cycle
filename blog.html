@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Blog — aSantE Cycle</title>
+    <script>
+(function () {
+  try {
+    var k = "asantec-cycle-theme";
+    var t = localStorage.getItem(k);
+    if (t === "dark" || t === "light") {
+      document.documentElement.setAttribute("data-theme", t);
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="assets/images/logoNoback.png" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar site-header">
+        <a href="learnJs.html" class="log">
+            <img src="assets/images/logoNoback.png" alt="aSantE Cycle" width="36" height="36" class="brand-mark">
+            <span class="brand-title">aSantE Cycle</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+            <ul class="nav-links">
+                <li><a href="learnJs.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="impacts.html">Impact</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html" aria-current="page">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="con header-actions">
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" title="Theme" aria-pressed="false">
+                <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
+                <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+            </button>
+            <button type="button" class="btn btn--primary btn--sm">Contact <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="container page-hero__inner">
+                <span class="pill"><span class="pill__dot" aria-hidden="true"></span> Journal</span>
+                <h1 id="page-title" class="page-hero__title">Tips &amp; stories</h1>
+                <p class="page-hero__lead">Eco-living guides, behind-the-scenes from our projects, and practical ideas for lower-impact daily habits.</p>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="container">
+                <div class="blog-list">
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/beans.jpg" alt="" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <p class="blog-card__date">March 2026 · Guide</p>
+                            <h3 class="card-title">Five ways to cut kitchen plastic this week</h3>
+                            <p class="card-desc">Small swaps that add up—storage, shopping bags, and cleaning without single-use bottles.</p>
+                            <p class="card-meta"><a href="#">Read article</a></p>
+                        </div>
+                    </article>
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/forest.jpg" alt="" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <p class="blog-card__date">February 2026 · Field notes</p>
+                            <h3 class="card-title">Inside our Indonesia tree-planting season</h3>
+                            <p class="card-desc">How partners choose species, protect saplings, and measure survival rates over time.</p>
+                            <p class="card-meta"><a href="#">Read article</a></p>
+                        </div>
+                    </article>
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/vegetation.jpg" alt="" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <p class="blog-card__date">January 2026 · Impact</p>
+                            <h3 class="card-title">What we learned from last year’s coastal clean-ups</h3>
+                            <p class="card-desc">Waste categories, local partnerships, and what we’re funding next.</p>
+                            <p class="card-meta"><a href="#">Read article</a></p>
+                        </div>
+                    </article>
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/tomato.jpg" alt="" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <p class="blog-card__date">December 2025 · How we work</p>
+                            <h3 class="card-title">How we audit new suppliers</h3>
+                            <p class="card-desc">Checklists for labor, chemicals, water use, and packaging before a product hits the shop.</p>
+                            <p class="card-meta"><a href="#">Read article</a></p>
+                        </div>
+                    </article>
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/fam.jpg" alt="" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <p class="blog-card__date">November 2025 · Community</p>
+                            <h3 class="card-title">Volunteer spotlight: beach days that build data</h3>
+                            <p class="card-desc">Why we weigh and sort waste—and how volunteers help shape local policy asks.</p>
+                            <p class="card-meta"><a href="#">Read article</a></p>
+                        </div>
+                    </article>
+                    <article class="card card--project">
+                        <div class="card__media">
+                            <img src="assets/images/beans.jpg" alt="" class="card-image">
+                        </div>
+                        <div class="card-info">
+                            <p class="blog-card__date">October 2025 · Lifestyle</p>
+                            <h3 class="card-title">Composting in an apartment: starter kit</h3>
+                            <p class="card-desc">Bokashi, worm bins, and municipal options—pick what fits your space.</p>
+                            <p class="card-meta"><a href="#">Read article</a></p>
+                        </div>
+                    </article>
+                </div>
+                <p class="body-text mt-section text-center mx-auto max-w-prose">More articles are added regularly. <a href="learnJs.html#subscribe">Subscribe</a> to get new posts by email.</p>
+            </div>
+        </section>
+
+        <section class="section section--muted page-section page-section--border">
+            <div class="container join cta-panel">
+                <div class="join-info">
+                    <h2 class="join-heading">Never miss a story</h2>
+                    <p class="join-lead">Join the list for new guides and project updates.</p>
+                    <a href="learnJs.html#subscribe" class="btn btn--on-dark">Subscribe <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <a href="learnJs.html" class="footer__brand log">
+                <img src="assets/images/logoNoback.png" alt="aSantE Cycle" width="32" height="32" class="brand-mark">
+                <span class="brand-title">aSantE Cycle</span>
+            </a>
+            <nav class="footer__nav" aria-label="Footer">
+                <a href="learnJs.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="learnJs.html#subscribe">Newsletter</a>
+            </nav>
+            <p class="footer__copy">© <span id="footer-year"></span> aSantE Cycle. All rights reserved.</p>
+        </div>
+        <div class="contacts" aria-hidden="true"></div>
+    </footer>
+
+    <script src="learn.js"></script>
+</body>
+</html>

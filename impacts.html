@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Impact — aSantE Cycle</title>
+    <script>
+(function () {
+  try {
+    var k = "asantec-cycle-theme";
+    var t = localStorage.getItem(k);
+    if (t === "dark" || t === "light") {
+      document.documentElement.setAttribute("data-theme", t);
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="assets/images/logoNoback.png" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar site-header">
+        <a href="learnJs.html" class="log">
+            <img src="assets/images/logoNoback.png" alt="aSantE Cycle" width="36" height="36" class="brand-mark">
+            <span class="brand-title">aSantE Cycle</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+            <ul class="nav-links">
+                <li><a href="learnJs.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="impacts.html" aria-current="page">Impact</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="con header-actions">
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" title="Theme" aria-pressed="false">
+                <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
+                <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+            </button>
+            <button type="button" class="btn btn--primary btn--sm">Contact <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="container page-hero__inner">
+                <span class="pill"><span class="pill__dot" aria-hidden="true"></span> Impact</span>
+                <h1 id="page-title" class="page-hero__title">Our impact in numbers</h1>
+                <p class="page-hero__lead">We track plastic avoided, trees planted, waste diverted from coastlines, and carbon-neutral shipping—so you can see progress year over year.</p>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="container">
+                <div class="rating stat-grid">
+                    <div class="number stat">
+                        <span class="stat__value">10k+</span>
+                        <span class="stat__label">Plastic reduced (kg)</span>
+                    </div>
+                    <div class="number stat">
+                        <span class="stat__value">50+</span>
+                        <span class="stat__label">Eco product lines</span>
+                    </div>
+                    <div class="number stat">
+                        <span class="stat__value">15k+</span>
+                        <span class="stat__label">Trees planted</span>
+                    </div>
+                    <div class="number stat">
+                        <span class="stat__value">100%</span>
+                        <span class="stat__label">Carbon-neutral shipping</span>
+                    </div>
+                </div>
+                <div class="content-block mt-section">
+                    <h2>How we measure</h2>
+                    <p>We work with third-party partners where possible to validate waste and emissions data. Plastic figures reflect packaging and logistics changes versus a baseline year. Tree planting is tracked through our reforestation partners in Indonesia.</p>
+                    <p>Coastal clean-up weights include sorted recyclables and material sent for responsible disposal. We publish an annual impact summary and refine our methodology as standards evolve.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted page-section page-section--border">
+            <div class="container">
+                <header class="section-header">
+                    <span class="pill"><span class="pill__dot" aria-hidden="true"></span> Focus areas</span>
+                    <h2 class="section-heading">Where we invest</h2>
+                    <p class="section-sub">Programs that scale community benefit and ecosystem health.</p>
+                </header>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <h3>Forests &amp; climate</h3>
+                        <p>Native species planting, soil health, and long-term land stewardship alongside local communities.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Oceans &amp; coasts</h3>
+                        <p>Beach and estuary clean-ups with NGOs; data shared to improve local waste systems.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Fair livelihoods</h3>
+                        <p>Fair trade and smallholder networks with training on sustainable growing practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="container join cta-panel">
+                <div class="join-info">
+                    <h2 class="join-heading">See impact in your inbox</h2>
+                    <p class="join-lead">Annual reports, project highlights, and tips for lower-impact living.</p>
+                    <a href="learnJs.html#subscribe" class="btn btn--on-dark">Get updates <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <a href="learnJs.html" class="footer__brand log">
+                <img src="assets/images/logoNoback.png" alt="aSantE Cycle" width="32" height="32" class="brand-mark">
+                <span class="brand-title">aSantE Cycle</span>
+            </a>
+            <nav class="footer__nav" aria-label="Footer">
+                <a href="learnJs.html">Home</a>
+                <a href="impacts.html">Impact</a>
+                <a href="projects.html">Projects</a>
+                <a href="learnJs.html#subscribe">Newsletter</a>
+            </nav>
+            <p class="footer__copy">© <span id="footer-year"></span> aSantE Cycle. All rights reserved.</p>
+        </div>
+        <div class="contacts" aria-hidden="true"></div>
+    </footer>
+
+    <script src="learn.js"></script>
+</body>
+</html>
